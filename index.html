@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Calculator App</h1>
+    </header>
+    <main>
+      <div id="calculatorContainer">
+        <form id="calculator" onsubmit="calculate(event)">
+          <h2>Try the calculator</h2>
+          <label for="operand1">Operand 1:</label>
+          <input required type="number" id="operand1" />
+          <label for="operand2">Operand 2:</label>
+          <input required type="number" id="operand2" />
+          <label for="operator">Operator</label>
+          <select required id="operator" form="calculator">
+            <option disabled selected></option>
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="divide">Divide</option>
+            <option value="multiply">Multiply</option>
+          </select>
+          <button onclick="clearValues()">Clear</button>
+          <input type="submit" value="Calculate" />
+          <button type="button" id="store" onclick="insertResult()">
+            Insert Result
+          </button>
+        </form>
+      </div>
+      <p id="result"></p>
+    </main>
+  </body>
+</html>
